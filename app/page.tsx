@@ -12,18 +12,11 @@ import {
   Play,
   Rocket,
   Scissors,
-  ShieldCheck,
   Sparkles,
   UploadCloud,
   X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-
-const proofItems = [
-  "10M+ views across client videos",
-  "Clean drafts ready to review",
-  "Made for brands, founders, and creators",
-];
 
 const bottlenecks = [
   {
@@ -108,12 +101,6 @@ const pipeline = [
       "Your optimized video file is rendered with final thumbnail and platform specs, ready to publish and drive conversions.",
     icon: Rocket,
   },
-];
-
-const portfolioTiles = [
-  { label: "Creator Hook Rewrite", value: "+45%", meta: "Audience retention" },
-  { label: "SaaS Product Demo", value: "48h", meta: "First draft SLA" },
-  { label: "Podcast Cutdown", value: "12x", meta: "Short-form exports" },
 ];
 
 const testimonials = [
@@ -214,15 +201,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="proof-strip section" aria-label="Sterling Studio proof">
-        {proofItems.map((item) => (
-          <div className="proof-item" key={item}>
-            <ShieldCheck size={18} />
-            <span>{item}</span>
-          </div>
-        ))}
-      </section>
-
       <section className="bottleneck-section section" id="about">
         <div className="section-heading split-heading">
           <span>The Sterling Studio Operation</span>
@@ -314,29 +292,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="portfolio-section" id="portfolio">
-        <div className="section portfolio-layout">
-          <div className="portfolio-copy">
-            <span>Portfolio Interaction Preview</span>
-            <h2>Video case studies built around inputs, intervention, and metric lift.</h2>
-            <p>
-              Every portfolio element is designed to explain what raw assets
-              arrived, how Sterling intervened, and which performance metric
-              improved after the final edit.
-            </p>
-          </div>
-          <div className="portfolio-board" aria-label="Portfolio performance samples">
-            {portfolioTiles.map((tile) => (
-              <article className="portfolio-tile" key={tile.label}>
-                <span>{tile.label}</span>
-                <strong>{tile.value}</strong>
-                <p>{tile.meta}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="pipeline-section section">
         <div className="section-heading">
           <h2>The Frictionless 4-Step Video Pipeline</h2>
@@ -382,7 +337,6 @@ export default function Home() {
       <section className="closing-section" id="trial">
         <div className="section closing-layout">
           <div>
-            <span>Free Video Trial</span>
             <h2>Ready to reclaim your time and scale your video presence?</h2>
           </div>
           <div className="closing-copy">
