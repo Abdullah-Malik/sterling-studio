@@ -47,10 +47,10 @@ const services = [
     format: "TikTok, Reels, Shorts",
     heading: "For short-form content",
     description:
-      "We turn raw clips into quick, polished videos with strong hooks, captions, clean cuts, and sound that keeps people watching.",
+      "We turn raw clips into quick, polished videos with strong hooks, captions, clean cuts, and sound that keeps people watching. Each clip is shaped for vertical viewing, fast pacing, and easy sharing across social platforms.",
     example: '"Cut this into 3 short clips for Instagram"',
-    process: "Hook first -> tight cuts -> captions -> sound polish",
-    result: "Ready-to-post clips for TikTok, Reels, and Shorts",
+    process: "Hook first -> tight cuts -> captions -> vertical crop -> sound polish",
+    result: "Ready-to-post clips with captions, clean pacing, and platform-friendly exports",
     icon: Sparkles,
   },
   {
@@ -119,13 +119,13 @@ const portfolioTiles = [
 const testimonials = [
   {
     quote:
-      "Editing used to keep me up until 2 AM every week. Sterling Studio changed my workflow, lifted retention by 45%, and helped us hit our first 100k subscriber milestone.",
+      "I used to spend late nights editing instead of planning new videos. Sterling Studio made the process easier and helped our videos feel sharper and more consistent.",
     author: "David Thorne",
     role: "Tech Entrepreneur & YouTube Creator",
   },
   {
     quote:
-      "Sterling Studio treats our product demos and customer case studies with enterprise-level professionalism. They are fast, reliable, and understand how visual pacing drives signups.",
+      "Our product demos and customer stories look much more polished now. The team is fast, easy to work with, and understands how to make business videos clear.",
     author: "Elena Rostova",
     role: "Head of Marketing at SyncFlow Software",
   },
@@ -140,7 +140,7 @@ export default function Home() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveServiceIndex((index) => (index + 1) % services.length);
-    }, 2800);
+    }, 1000);
 
     return () => window.clearInterval(timer);
   }, []);
@@ -362,8 +362,8 @@ export default function Home() {
 
       <section className="testimonial-section section">
         <div className="section-heading">
-          <h2>Performance Reviews</h2>
-          <p>Metric-backed confirmation from creators and corporate stakeholders.</p>
+          <h2>Testimonials</h2>
+          <p>What creators and business teams say about working with us.</p>
         </div>
 
         <div className="testimonial-grid">
