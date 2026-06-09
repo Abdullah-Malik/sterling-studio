@@ -1161,8 +1161,20 @@ button {
   }
 
   .service-window {
-    min-height: auto;
+    min-height: 260px;
     padding: 22px;
+  }
+
+  .service-number {
+    top: 18px;
+    right: 20px;
+    bottom: auto;
+    font-size: 34px;
+  }
+
+  .service-panel-kicker,
+  .service-panel-copy h3 {
+    max-width: calc(100% - 58px);
   }
 
   .section-heading {
