@@ -13,92 +13,103 @@ import {
   Rocket,
   Scissors,
   Sparkles,
-  UploadCloud,
   X,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const bottlenecks = [
   {
     pain:
-      "You spend hours trimming clips, fixing audio, adjusting colors, and putting the whole video together.",
+      "You have ideas, but turning them into consistent content takes too much time across planning, design, filming, editing, and posting.",
     solution:
-      "We handle the full edit and send back clean, polished videos that are ready to share.",
+      "We help shape the strategy, create the assets, edit the videos, and prepare content that is ready to share.",
   },
   {
     pain:
-      "Your videos can feel slow, unclear, or hard to watch, so people leave before your message lands.",
+      "Your brand can feel scattered when every post, video, graphic, and campaign looks like it came from a different place.",
     solution:
-      "We shape the pacing, sound, visuals, and opening hook so your content keeps people watching.",
+      "We build a clear creative direction so your content looks connected, polished, and easy for your audience to recognize.",
   },
 ];
 
 const services = [
   {
-    title: "Short-Form Videos",
-    tabLabel: "Short Form",
-    format: "TikTok, Reels, Shorts",
-    heading: "For short-form content",
+    title: "Content Strategy",
+    format: "Ideas, Hooks, Campaign Planning",
+    heading: "Plan content with a clear direction",
     description:
-      "We turn raw clips into quick, polished videos with strong hooks, captions, clean cuts, and sound that keeps people watching. Each clip is shaped for vertical viewing, fast pacing, and easy sharing across social platforms.",
-    example: '"Cut this into 3 short clips for Instagram"',
-    process: "Hook first -> tight cuts -> captions -> vertical crop -> sound polish",
-    result: "Ready-to-post clips with captions, clean pacing, and platform-friendly exports",
+      "We help you decide what to create, how it should sound, where it should live, and how each piece supports your brand goals.",
+    example: '"Build a content plan for our next product launch"',
+    process:
+      "We clarify your goals, define the audience, shape strong ideas, and turn them into a practical content plan.",
+    result: "A focused content roadmap with ideas your team can actually use",
     icon: Sparkles,
   },
   {
-    title: "Long-Form Videos",
-    tabLabel: "Long Form",
-    format: "YouTube & Podcasts",
-    heading: "For YouTube and podcasts",
+    title: "Branding & Creative Direction",
+    format: "Visual Style, Messaging, Design",
+    heading: "Give your brand a consistent look and voice",
     description:
-      "We clean up your footage, remove slow moments, improve the flow, and add visuals that make longer videos easier to watch.",
-    example: '"Edit this podcast into a clear YouTube episode"',
-    process: "Clean audio -> remove pauses -> add B-roll -> final polish",
-    result: "A complete long-form video that feels clear and professional",
+      "We shape the look, feel, tone, and creative direction behind your content so every asset feels like it belongs to the same brand.",
+    example: '"Help our content look more polished and consistent"',
+    process:
+      "We review your current brand, set the visual direction, refine the messaging, and define the style for your assets.",
+    result: "Clear creative guidance for videos, graphics, posts, and campaigns",
+    icon: Building2,
+  },
+  {
+    title: "Video Production & Editing",
+    format: "Short Form, Long Form, Ads",
+    heading: "Create videos that feel sharp and easy to watch",
+    description:
+      "We edit short-form videos, long-form content, ads, demos, and brand stories with clean pacing, captions, sound, and platform-ready exports.",
+    example: '"Turn this footage into polished content for our channels"',
+    process:
+      "We review the footage, build the edit, add captions and sound, then prepare final exports for the right platforms.",
+    result: "Professional videos ready for social, websites, ads, or sales",
     icon: Film,
   },
   {
-    title: "Brand & Business Videos",
-    tabLabel: "Brand Videos",
-    format: "Demos, Ads, Testimonials",
-    heading: "For business and brand content",
+    title: "Brand Content Management",
+    format: "Ongoing Content Support",
+    heading: "Keep your brand content moving",
     description:
-      "We edit demos, ads, testimonials, and company videos so your message is easy to understand and your brand looks sharp.",
-    example: '"Make this customer story feel polished and credible"',
-    process: "Find the story -> clean the edit -> add brand assets -> export",
-    result: "A polished business video ready for your site, ads, or sales team",
-    icon: Building2,
+      "We help manage the content flow from idea to delivery, keeping your brand supplied with polished assets without making your team chase every detail.",
+    example: '"Help us keep content moving every month"',
+    process:
+      "We plan the calendar, organize asset needs, coordinate production, and keep content moving toward delivery.",
+    result: "A steady content workflow with fewer bottlenecks and clearer output",
+    icon: Layers,
   },
 ];
 
 const pipeline = [
   {
     step: "01",
-    title: "Drop Your Raw Assets",
+    title: "Discovery & Strategy",
     description:
-      "Upload unedited footage, voiceovers, and custom assets to a secure cloud folder, Frame.io, or Google Drive workspace.",
-    icon: UploadCloud,
+      "We learn about your brand, audience, goals, current content, and what you want your content to accomplish.",
+    icon: MessageSquare,
   },
   {
     step: "02",
-    title: "Creative Blueprint & Post-Production",
+    title: "Creative Planning",
     description:
-      "We review your brand guidelines, establish pacing, then manage audio cleanup, color grading, narrative cuts, and B-roll placement.",
+      "We map out content ideas, hooks, scripts, visual direction, brand assets, and the best formats for each platform.",
     icon: Layers,
   },
   {
     step: "03",
-    title: "Frame-by-Frame Feedback",
+    title: "Production & Editing",
     description:
-      "Receive a high-definition draft link and leave exact timestamped revision notes directly on the video timeline.",
-    icon: MessageSquare,
+      "We create the visuals, edit the videos, design supporting assets, refine the details, and keep everything aligned with your brand.",
+    icon: Clapperboard,
   },
   {
     step: "04",
-    title: "Final Asset Delivery",
+    title: "Delivery & Launch",
     description:
-      "Your optimized video file is rendered with final thumbnail and platform specs, ready to publish and drive conversions.",
+      "You receive platform-ready content with the right exports, captions, thumbnails, and guidance to publish with confidence.",
     icon: Rocket,
   },
 ];
@@ -106,13 +117,13 @@ const pipeline = [
 const testimonials = [
   {
     quote:
-      "I used to spend late nights editing instead of planning new videos. Sterling Studio made the process easier and helped our videos feel sharper and more consistent.",
+      "Sterling Studio helped us turn scattered ideas into a clear content plan. Our posts, videos, and brand visuals finally feel consistent.",
     author: "David Thorne",
-    role: "Tech Entrepreneur & YouTube Creator",
+    role: "Founder & Creator",
   },
   {
     quote:
-      "Our product demos and customer stories look much more polished now. The team is fast, easy to work with, and understands how to make business videos clear.",
+      "We needed more than editing. Sterling helped us shape our content, polish our brand visuals, and keep a steady flow of assets moving.",
     author: "Elena Rostova",
     role: "Head of Marketing at SyncFlow Software",
   },
@@ -120,17 +131,6 @@ const testimonials = [
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeServiceIndex, setActiveServiceIndex] = useState(0);
-  const activeService = services[activeServiceIndex];
-  const ActiveServiceIcon = activeService.icon;
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveServiceIndex((index) => (index + 1) % services.length);
-    }, 1000);
-
-    return () => window.clearInterval(timer);
-  }, []);
 
   return (
     <main>
@@ -149,8 +149,8 @@ export default function Home() {
             <a className="nav-link" href="#services" onClick={() => setMenuOpen(false)}>
               Services
             </a>
-            <a className="nav-link" href="#portfolio" onClick={() => setMenuOpen(false)}>
-              Our Portfolio
+            <a className="nav-link" href="#process" onClick={() => setMenuOpen(false)}>
+              Process
             </a>
             <a className="nav-link" href="#about" onClick={() => setMenuOpen(false)}>
               About Us
@@ -179,23 +179,23 @@ export default function Home() {
         <div className="hero-inner">
           <div className="info-badge">
             <Clapperboard size={17} />
-            Premium Post-Production Studio
+            Content, Branding & Video Studio
           </div>
-          <h1>Video Editing for Brands Building Momentum</h1>
+          <h1>The Content Studio Behind Growing Brands</h1>
           <p>
-            Sterling Studio transforms your raw footage into high-retention
-            visual assets. From viral short-form clips to cinematic YouTube
-            content and corporate brand campaigns, we lead the entire
-            post-production engine so you can dominate your market.
+            Sterling Studio helps brands, founders, and businesses plan,
+            create, edit, and manage polished content. From brand direction and
+            social assets to short-form videos, campaigns, and launch-ready
+            creative, we support the full content pipeline.
           </p>
           <div className="hero-actions">
             <a className="button button-dark primary-button" href="#trial">
               Book Consultation
               <ArrowRight size={18} />
             </a>
-            <a className="showreel-link" href="#portfolio">
+            <a className="showreel-link" href="#services">
               <Play size={18} fill="currentColor" />
-              View Our 2026 Showreel
+              Explore Our Services
             </a>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function Home() {
       <section className="bottleneck-section section" id="about">
         <div className="section-heading split-heading">
           <span>The Sterling Studio Operation</span>
-          <h2>Spend less time editing and more time growing your brand.</h2>
+          <h2>Spend less time chasing content and more time growing your brand.</h2>
         </div>
 
         <div className="comparison-grid">
@@ -231,76 +231,52 @@ export default function Home() {
 
       <section className="services-section section" id="services">
         <div className="section-heading">
-          <h2>Video Editing Services</h2>
-          <p>Simple, professional edits for the content your brand needs most.</p>
+          <h2>Content Creation Services</h2>
+          <p>Strategy, branding, video, and ongoing support for the content your brand needs most.</p>
         </div>
 
-        <div className="service-tabs-card">
-          <div className="service-tabs" role="tablist" aria-label="Video editing service types">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              const isActive = activeServiceIndex === index;
+        <div className="service-stack" aria-label="Video editing service types">
+          {services.map((service) => {
+            const Icon = service.icon;
 
-              return (
-                <button
-                  aria-controls="service-tab-panel"
-                  aria-selected={isActive}
-                  className={["service-tab", isActive ? "active" : ""]
-                    .filter(Boolean)
-                    .join(" ")}
-                  id={`service-tab-${index}`}
-                  key={service.title}
-                  onClick={() => setActiveServiceIndex(index)}
-                  role="tab"
-                  type="button"
-                >
-                  <Icon size={18} />
-                  <span>{service.tabLabel}</span>
-                </button>
-              );
-            })}
-          </div>
+            return (
+              <article className="service-window" key={service.title}>
+                <div className="service-panel-copy">
+                  <div className="service-panel-kicker">
+                    <Icon size={18} />
+                    <span>{service.format}</span>
+                  </div>
+                  <h3>{service.heading}</h3>
+                  <p>{service.description}</p>
+                  <div className="service-prompt">{service.example}</div>
+                </div>
 
-          <div
-            aria-labelledby={`service-tab-${activeServiceIndex}`}
-            className="service-tab-panel"
-            id="service-tab-panel"
-            key={activeService.title}
-            role="tabpanel"
-          >
-            <div className="service-panel-copy">
-              <div className="service-panel-kicker">
-                <ActiveServiceIcon size={18} />
-                <span>{activeService.format}</span>
-              </div>
-              <h3>{activeService.heading}</h3>
-              <p>{activeService.description}</p>
-              <div className="service-prompt">{activeService.example}</div>
-            </div>
-
-            <div className="service-panel-output">
-              <div>
-                <span>How we edit</span>
-                <p>{activeService.process}</p>
-              </div>
-              <div>
-                <span>You get</span>
-                <strong>{activeService.result}</strong>
-              </div>
-            </div>
-          </div>
+                <div className="service-panel-output">
+                  <div>
+                    <span>What we handle</span>
+                    <p>{service.process}</p>
+                  </div>
+                  <div>
+                    <span>You get</span>
+                    <strong>{service.result}</strong>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      <section className="pipeline-section section">
+      <section className="pipeline-section section" id="process">
         <div className="section-heading">
-          <h2>The Frictionless 4-Step Video Pipeline</h2>
-          <p>Built to reduce outsourcing anxiety around speed, security, and review clarity.</p>
+          <h2>The 4-Step Content Growth Pipeline</h2>
+          <p>Built to take your brand from scattered ideas to polished, ready-to-share content.</p>
         </div>
 
         <div className="pipeline-grid">
           {pipeline.map((item) => {
             const Icon = item.icon;
+
             return (
               <article className="pipeline-card" key={item.step}>
                 <span className="step-number">{item.step}</span>
@@ -337,13 +313,13 @@ export default function Home() {
       <section className="closing-section" id="trial">
         <div className="section closing-layout">
           <div>
-            <h2>Ready to reclaim your time and scale your video presence?</h2>
+            <h2>Ready to create content your audience remembers?</h2>
           </div>
           <div className="closing-copy">
             <p>
-              Book a quick consultation and tell us what you need edited. We
-              will review your footage, suggest the best approach, and show you
-              how Sterling Studio can help.
+              Book a quick consultation and tell us what you want to create. We
+              will review your goals, map the right content workflow, and show
+              how Sterling Studio can support your brand.
             </p>
             <a className="button button-dark closing-button" href="mailto:hello@sterlingstudio.com">
               Book Consultation
@@ -358,22 +334,22 @@ export default function Home() {
           <div>
             <h2>Sterling Studio</h2>
             <p>
-              Premium post-production for creators, companies, entrepreneurs,
-              and personal brands.
+              Content creation, branding, and video support for growing brands,
+              founders, businesses, and creative teams.
             </p>
           </div>
           <div>
             <h3>Studio Navigation</h3>
             <a href="/">Home</a>
-            <a href="#services">Premium Services</a>
-            <a href="#portfolio">Video Portfolio</a>
-            <a href="#about">Meet the Editors</a>
-            <a href="#trial">Start a Trial</a>
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#about">About the Studio</a>
+            <a href="#trial">Book Consultation</a>
           </div>
           <div>
             <h3>Legal & Media</h3>
             <a href="#privacy">Privacy Statement</a>
-            <a href="#terms">Terms of Post-Production</a>
+            <a href="#terms">Terms of Service</a>
             <a href="#rights">Media Release & Usage Rights</a>
           </div>
           <div>
@@ -382,11 +358,11 @@ export default function Home() {
             <a href="#youtube">YouTube</a>
             <a href="#social">TikTok / Instagram</a>
             <form className="newsletter-form">
-              <label htmlFor="newsletter">Weekly Breakdown</label>
+              <label htmlFor="newsletter">Creative Notes</label>
               <input
                 id="newsletter"
                 type="email"
-                placeholder="Get our weekly breakdown of high-retention video hooks. Zero fluff."
+                placeholder="Get ideas on content, branding, and video. Zero fluff."
               />
             </form>
           </div>
