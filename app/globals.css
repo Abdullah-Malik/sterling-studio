@@ -1161,7 +1161,8 @@ button {
   }
 
   .service-window {
-    padding: 24px;
+    min-height: auto;
+    padding: 22px;
   }
 
   .section-heading {
