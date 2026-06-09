@@ -430,20 +430,21 @@ button {
 
 .service-stack {
   display: grid;
-  gap: 24px;
-  width: min(100%, 980px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  width: min(100%, 1180px);
   margin: 0 auto;
 }
 
 .service-window {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
-  gap: clamp(28px, 5vw, 72px);
+  position: relative;
+  min-height: 410px;
   overflow: hidden;
   border: 0;
   border-radius: 8px;
   background: #fff4ef;
-  padding: clamp(28px, 4vw, 48px);
+  padding: 26px 22px;
 }
 
 .service-window:nth-child(2) {
@@ -473,6 +474,16 @@ button {
   min-width: 0;
 }
 
+.service-number {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  color: rgba(15, 23, 32, 0.16);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .service-panel-kicker {
   display: inline-flex;
   align-items: center;
@@ -493,8 +504,8 @@ button {
 }
 
 .service-panel-copy h3 {
-  margin-top: 18px;
-  font-size: clamp(28px, 3vw, 38px);
+  margin-top: 14px;
+  font-size: clamp(22px, 2vw, 26px);
 }
 
 .service-panel-copy p,
@@ -504,52 +515,6 @@ button {
   color: #505050;
   font-size: 16px;
   line-height: 1.55;
-}
-
-.service-prompt {
-  margin-top: 28px;
-  border-left: 3px solid var(--magenta);
-  border-radius: 7px;
-  background: rgba(255, 255, 255, 0.62);
-  color: #202832;
-  padding: 16px 18px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-size: 15px;
-  line-height: 1.45;
-}
-
-.service-panel-output {
-  display: grid;
-  align-content: center;
-  gap: 34px;
-  border-left: 1px solid #dfe2e6;
-  padding-left: clamp(28px, 4vw, 48px);
-}
-
-.service-panel-output span {
-  display: block;
-  margin-bottom: 10px;
-  color: #687380;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.service-panel-output p,
-.service-panel-output strong {
-  color: #202832;
-  font-size: 17px;
-  line-height: 1.45;
-}
-
-.service-panel-output p {
-  margin: 0;
-}
-
-.service-panel-output strong {
-  display: block;
 }
 
 .work-section {
@@ -709,11 +674,11 @@ button {
 }
 
 .pipeline-card:nth-child(3) {
-  background: #fff4ef;
+  background: #fbf4f9;
 }
 
 .pipeline-card:nth-child(4) {
-  background: #f2fbff;
+  background: #effdf8;
 }
 
 .pipeline-card:nth-child(odd)::before {
@@ -1012,23 +977,17 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .service-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 820px);
+  }
+
   .project-hero {
     grid-template-columns: 1fr;
   }
 
   .project-cover {
     max-height: 680px;
-  }
-
-  .service-window {
-    grid-template-columns: 1fr;
-  }
-
-  .service-panel-output {
-    border-top: 1px solid #dfe2e6;
-    border-left: 0;
-    padding-top: 26px;
-    padding-left: 0;
   }
 
 }
@@ -1126,6 +1085,11 @@ button {
   .testimonial-grid,
   .closing-layout {
     grid-template-columns: 1fr;
+  }
+
+  .service-stack {
+    grid-template-columns: 1fr;
+    width: min(100%, 520px);
   }
 
   .pipeline-grid {

@@ -115,15 +115,21 @@ const pipeline = [
 const testimonials = [
   {
     quote:
-      "Sterling Studio helped us turn scattered ideas into a clear content plan. Our posts, videos, and brand visuals finally feel consistent.",
-    author: "David Thorne",
-    role: "Founder & Creator",
+      "The content felt active, polished, and ready for launch. The social posts, motion graphics, and video assets helped the brand stay consistent across channels.",
+    author: "Shiba Wings",
+    role: "Social Content & Motion",
   },
   {
     quote:
-      "We needed more than editing. Sterling helped us shape our content, polish our brand visuals, and keep a steady flow of assets moving.",
-    author: "Elena Rostova",
-    role: "Head of Marketing at SyncFlow Software",
+      "The motion work gave our visuals more energy. The edits were clean, branded, and easy to use across our marketing and social content.",
+    author: "Wingers UK",
+    role: "Motion Graphics",
+  },
+  {
+    quote:
+      "The brand visuals and promotional assets made the product content feel clearer and more professional, from packaging support to motion-led creative.",
+    author: "The Nutritionists",
+    role: "Brand Design & Motion",
   },
 ];
 
@@ -192,32 +198,45 @@ export default function Home() {
           <p>Strategy, branding, video, and ongoing support for the content your brand needs most.</p>
         </div>
 
-        <div className="service-stack" aria-label="Video editing service types">
-          {services.map((service) => {
+        <div className="service-stack" aria-label="Content creation service types">
+          {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
               <article className="service-window" key={service.title}>
+                <span className="service-number">{String(index + 1).padStart(2, "0")}</span>
                 <div className="service-panel-copy">
                   <div className="service-panel-kicker">
                     <Icon size={18} />
-                    <span>{service.format}</span>
+                    <span>{service.title}</span>
                   </div>
                   <h3>{service.heading}</h3>
                   <p>{service.description}</p>
-                  <div className="service-prompt">{service.example}</div>
                 </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
 
-                <div className="service-panel-output">
-                  <div>
-                    <span>What we handle</span>
-                    <p>{service.process}</p>
-                  </div>
-                  <div>
-                    <span>You get</span>
-                    <strong>{service.result}</strong>
-                  </div>
+      <section className="pipeline-section section" id="process">
+        <div className="section-heading">
+          <h2>The 4-Step Content Growth Pipeline</h2>
+          <p>Built to take your brand from scattered ideas to polished, ready-to-share content.</p>
+        </div>
+
+        <div className="pipeline-grid">
+          {pipeline.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <article className="pipeline-card" key={item.step}>
+                <span className="step-number">{item.step}</span>
+                <div className="card-icon" aria-hidden="true">
+                  <Icon size={22} />
                 </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </article>
             );
           })}
@@ -246,30 +265,6 @@ export default function Home() {
               </div>
             </a>
           ))}
-        </div>
-      </section>
-
-      <section className="pipeline-section section" id="process">
-        <div className="section-heading">
-          <h2>The 4-Step Content Growth Pipeline</h2>
-          <p>Built to take your brand from scattered ideas to polished, ready-to-share content.</p>
-        </div>
-
-        <div className="pipeline-grid">
-          {pipeline.map((item) => {
-            const Icon = item.icon;
-
-            return (
-              <article className="pipeline-card" key={item.step}>
-                <span className="step-number">{item.step}</span>
-                <div className="card-icon" aria-hidden="true">
-                  <Icon size={22} />
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </article>
-            );
-          })}
         </div>
       </section>
 
