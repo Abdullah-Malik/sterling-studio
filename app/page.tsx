@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   Building2,
@@ -7,15 +5,15 @@ import {
   Clock,
   Film,
   Layers,
-  Menu,
   MessageSquare,
   Play,
   Rocket,
   Scissors,
   Sparkles,
-  X,
 } from "lucide-react";
-import { useState } from "react";
+import { SiteFooter } from "./components/site-footer";
+import { SiteHeader } from "./components/site-header";
+import { assetUrl, portfolioProjects } from "./project/portfolio-data";
 
 const bottlenecks = [
   {
@@ -130,50 +128,9 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <main>
-      <header className="site-header">
-        <nav className="nav-shell" aria-label="Primary navigation">
-          <a className="brand" href="/" aria-label="Sterling Studio home">
-            <span className="brand-wordmark">Sterling Studio</span>
-          </a>
-
-          <div
-            className={["nav-center", menuOpen ? "open" : ""]
-              .filter(Boolean)
-              .join(" ")}
-            id="mobile-navigation"
-          >
-            <a className="nav-link" href="#services" onClick={() => setMenuOpen(false)}>
-              Services
-            </a>
-            <a className="nav-link" href="#process" onClick={() => setMenuOpen(false)}>
-              Process
-            </a>
-            <a className="nav-link" href="#about" onClick={() => setMenuOpen(false)}>
-              About Us
-            </a>
-          </div>
-
-          <div className="nav-actions">
-            <a className="button button-dark nav-cta" href="#trial">
-              Book Consultation
-            </a>
-            <button
-              className="menu-button"
-              type="button"
-              aria-label="Toggle navigation menu"
-              aria-controls="mobile-navigation"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((open) => !open)}
-            >
-              {menuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="hero">
         <div className="hero-inner">
@@ -267,6 +224,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="work-section section" id="portfolio">
+        <div className="section-heading">
+          <span>Selected Work</span>
+          <h2>Portfolio</h2>
+          <p>
+            Projects across content, branding, motion, video, and film craft.
+          </p>
+        </div>
+
+        <div className="work-grid">
+          {portfolioProjects.map((project) => (
+            <a className="work-card" href={`/project/${project.slug}`} key={project.slug}>
+              <div className="work-card-media">
+                <img src={assetUrl(project.cover)} alt={`${project.title} portfolio preview`} loading="lazy" />
+              </div>
+              <div className="work-card-copy">
+                <span>{project.category}</span>
+                <h3>{project.title}</h3>
+                <p>{project.summary}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="pipeline-section section" id="process">
         <div className="section-heading">
           <h2>The 4-Step Content Growth Pipeline</h2>
@@ -329,45 +311,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <div className="footer-shell">
-          <div>
-            <h2>Sterling Studio</h2>
-            <p>
-              Content creation, branding, and video support for growing brands,
-              founders, businesses, and creative teams.
-            </p>
-          </div>
-          <div>
-            <h3>Studio Navigation</h3>
-            <a href="/">Home</a>
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#about">About the Studio</a>
-            <a href="#trial">Book Consultation</a>
-          </div>
-          <div>
-            <h3>Legal & Media</h3>
-            <a href="#privacy">Privacy Statement</a>
-            <a href="#terms">Terms of Service</a>
-            <a href="#rights">Media Release & Usage Rights</a>
-          </div>
-          <div>
-            <h3>Social Sync</h3>
-            <a href="#linkedin">LinkedIn</a>
-            <a href="#youtube">YouTube</a>
-            <a href="#social">TikTok / Instagram</a>
-            <form className="newsletter-form">
-              <label htmlFor="newsletter">Creative Notes</label>
-              <input
-                id="newsletter"
-                type="email"
-                placeholder="Get ideas on content, branding, and video. Zero fluff."
-              />
-            </form>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
