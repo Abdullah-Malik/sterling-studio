@@ -522,15 +522,9 @@ button {
 .service-panel-output {
   display: grid;
   align-content: center;
-  gap: 14px;
+  gap: 34px;
   border-left: 1px solid #dfe2e6;
   padding-left: clamp(28px, 4vw, 48px);
-}
-
-.service-panel-output > div {
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.56);
-  padding: 18px;
 }
 
 .service-panel-output span {
