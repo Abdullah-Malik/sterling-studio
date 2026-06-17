@@ -16,8 +16,8 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <nav className="nav-shell" aria-label="Primary navigation">
-        <a className="brand" href="/" aria-label="Sterling Studio home">
-          <span className="brand-wordmark">Sterling Studio</span>
+        <a className="brand" href="/" aria-label="Neo Cut Media home">
+          <span className="brand-wordmark">Neo Cut Media</span>
         </a>
 
         <div

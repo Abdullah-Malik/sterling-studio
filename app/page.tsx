@@ -146,7 +146,7 @@ export default function Home() {
           </div>
           <h1>The Content Studio Behind Growing Brands</h1>
           <p>
-            Sterling Studio helps brands, founders, and businesses plan,
+            Neo Cut Media helps brands, founders, and businesses plan,
             create, edit, and manage polished content. From brand direction and
             social assets to short-form videos, campaigns, and launch-ready
             creative, we support the full content pipeline.
@@ -166,7 +166,7 @@ export default function Home() {
 
       <section className="bottleneck-section section" id="about">
         <div className="section-heading split-heading">
-          <span>The Sterling Studio Operation</span>
+          <span>The Neo Cut Media Operation</span>
           <h2>Spend less time chasing content and more time growing your brand.</h2>
         </div>
 
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="comparison-column solution-column">
             <div className="comparison-heading">
               <Clock size={20} />
-              <h3>How Sterling Studio Helps</h3>
+              <h3>How Neo Cut Media Helps</h3>
             </div>
             {bottlenecks.map((item) => (
               <p key={item.solution}>{item.solution}</p>
@@ -296,9 +296,9 @@ export default function Home() {
             <p>
               Book a quick consultation and tell us what you want to create. We
               will review your goals, map the right content workflow, and show
-              how Sterling Studio can support your brand.
+              how Neo Cut Media can support your brand.
             </p>
-            <a className="button button-dark closing-button" href="mailto:hello@sterlingstudio.com">
+            <a className="button button-dark closing-button" href="mailto:hello@neocutmedia.com">
               Book Consultation
               <ArrowRight size={18} />
             </a>

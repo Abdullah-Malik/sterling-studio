@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
 
   return {
-    title: `${project.title} | Sterling Studio`,
+    title: `${project.title} | Neo Cut Media`,
     description: project.summary,
   };
 }

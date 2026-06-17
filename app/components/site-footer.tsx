@@ -3,7 +3,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-shell">
         <div>
-          <h2>Sterling Studio</h2>
+          <h2>Neo Cut Media</h2>
           <p>
             Content creation, branding, and video support for growing brands,
             founders, businesses, and creative teams.
