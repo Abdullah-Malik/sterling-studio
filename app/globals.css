@@ -518,6 +518,12 @@ button {
   gap: 24px;
 }
 
+.section-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
 .work-card {
   display: grid;
   overflow: hidden;
@@ -965,6 +971,214 @@ button {
   height: auto;
 }
 
+.content-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.page-hero {
+  padding: 86px 0 72px;
+}
+
+.page-hero > span,
+.portfolio-row-copy > span,
+.statement-panel > span {
+  display: block;
+  color: var(--accent-mid);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  max-width: 920px;
+  margin: 14px 0 18px;
+  color: var(--ink);
+  font-size: clamp(38px, 5.4vw, 68px);
+  font-weight: 720;
+  letter-spacing: 0;
+  line-height: 0.99;
+}
+
+.page-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.58;
+}
+
+.page-hero .button {
+  margin-top: 30px;
+}
+
+.page-section {
+  padding: 52px 0 96px;
+}
+
+.feature-grid,
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.feature-card,
+.contact-card,
+.statement-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 28px;
+}
+
+.feature-card:nth-child(2n),
+.contact-card:nth-child(2n) {
+  background: #151515;
+}
+
+.feature-card h3,
+.contact-card h2,
+.statement-panel h2 {
+  margin: 18px 0 12px;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.12;
+}
+
+.feature-card p,
+.statement-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+.statement-panel {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.statement-panel h2 {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 760px;
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.statement-panel p {
+  max-width: 740px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.contact-layout {
+  max-width: 900px;
+}
+
+.contact-card a {
+  display: inline-flex;
+  color: var(--accent-mid);
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.contact-card a:hover,
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+.compact-closing {
+  margin-top: 24px;
+}
+
+.portfolio-index {
+  display: grid;
+  gap: 34px;
+  padding: 28px 0 112px;
+}
+
+.portfolio-row {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 24px;
+}
+
+.portfolio-row:nth-child(2n) {
+  background: #151515;
+}
+
+.portfolio-row-media {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  background: var(--panel-soft);
+}
+
+.portfolio-row-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.portfolio-row-media:hover img {
+  transform: scale(1.03);
+}
+
+.portfolio-row-copy h2 {
+  margin: 12px 0 12px;
+  color: var(--ink);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.08;
+}
+
+.portfolio-row-copy p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.58;
+}
+
+.legal-hero {
+  padding-bottom: 44px;
+}
+
+.legal-content {
+  padding: 12px 0 112px;
+}
+
+.legal-content h2 {
+  margin: 34px 0 10px;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.16;
+}
+
+.legal-content p {
+  max-width: 880px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.68;
+}
+
+.legal-content a {
+  color: var(--accent-mid);
+  font-weight: 700;
+}
+
 @media (max-width: 1000px) {
   .footer-shell {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -988,6 +1202,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .portfolio-row {
+    grid-template-columns: 1fr;
+  }
+
   .project-cover {
     max-height: 680px;
   }
@@ -1000,7 +1218,11 @@ button {
   .hero-inner,
   .footer-shell,
   .project-hero,
-  .project-gallery-section {
+  .project-gallery-section,
+  .page-hero,
+  .page-section,
+  .portfolio-index,
+  .legal-content {
     width: min(100% - 28px, 720px);
   }
 
@@ -1081,7 +1303,9 @@ button {
 
   .comparison-grid,
   .testimonial-grid,
-  .closing-layout {
+  .closing-layout,
+  .feature-grid,
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1156,6 +1380,21 @@ button {
 
   .project-hero-copy h1 {
     font-size: clamp(36px, 12vw, 54px);
+  }
+
+  .page-hero {
+    padding: 58px 0 46px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(34px, 11vw, 52px);
+  }
+
+  .portfolio-row,
+  .feature-card,
+  .contact-card,
+  .statement-panel {
+    padding: 22px;
   }
 
   .service-window {

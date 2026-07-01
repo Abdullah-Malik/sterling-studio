@@ -152,7 +152,7 @@ export default function Home() {
             creative, we support the full content pipeline.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark primary-button" href="#trial">
+            <a className="button button-dark primary-button" href="/contact">
               Book Consultation
               <ArrowRight size={18} />
             </a>
@@ -266,6 +266,12 @@ export default function Home() {
             </a>
           ))}
         </div>
+        <div className="section-action">
+          <a className="button button-dark primary-button" href="/portfolio">
+            View Full Portfolio
+            <ArrowRight size={18} />
+          </a>
+        </div>
       </section>
 
       <section className="testimonial-section section">
@@ -298,7 +304,7 @@ export default function Home() {
               will review your goals, map the right content workflow, and show
               how Neo Cut Media can support your brand.
             </p>
-            <a className="button button-dark closing-button" href="mailto:hello@neocutmedia.com">
+            <a className="button button-dark closing-button" href="/contact">
               Book Consultation
               <ArrowRight size={18} />
             </a>

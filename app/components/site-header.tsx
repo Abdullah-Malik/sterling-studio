@@ -5,9 +5,10 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Services", href: "/#services" },
-  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Process", href: "/#process" },
-  { label: "About Us", href: "/#about" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function SiteHeader() {
@@ -39,7 +40,7 @@ export function SiteHeader() {
         </div>
 
         <div className="nav-actions">
-          <a className="button button-dark nav-cta" href="/#trial">
+          <a className="button button-dark nav-cta" href="/contact">
             Book Consultation
           </a>
           <button

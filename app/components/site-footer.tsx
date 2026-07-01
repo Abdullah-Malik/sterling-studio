@@ -13,30 +13,29 @@ export function SiteFooter() {
           <h3>Studio Navigation</h3>
           <a href="/">Home</a>
           <a href="/#services">Services</a>
-          <a href="/#portfolio">Portfolio</a>
+          <a href="/portfolio">Portfolio</a>
           <a href="/#process">Process</a>
-          <a href="/#about">About the Studio</a>
-          <a href="/#trial">Book Consultation</a>
+          <a href="/about">About the Studio</a>
+          <a href="/contact">Contact Us</a>
         </div>
         <div>
           <h3>Legal & Media</h3>
-          <a href="#privacy">Privacy Statement</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#rights">Media Release & Usage Rights</a>
+          <a href="/privacy-statement">Privacy Statement</a>
+          <a href="/terms-of-service">Terms of Service</a>
+          <a href="/media-release">Media Release & Usage Rights</a>
         </div>
         <div>
-          <h3>Social Sync</h3>
-          <a href="#linkedin">LinkedIn</a>
-          <a href="#youtube">YouTube</a>
-          <a href="#social">TikTok / Instagram</a>
-          <form className="newsletter-form">
-            <label htmlFor="newsletter">Creative Notes</label>
-            <input
-              id="newsletter"
-              type="email"
-              placeholder="Get ideas on content, branding, and video. Zero fluff."
-            />
-          </form>
+          <h3>Socials</h3>
+          <a href="https://www.instagram.com/neocutmedia" target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+          <a
+            href="https://www.linkedin.com/company/neocutmedia/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
     </footer>
